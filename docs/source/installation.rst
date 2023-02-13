@@ -10,6 +10,7 @@ Requirements
 - ``Composer <https://getcomposer.org/>``_
 - - Syntax error while installing? Go to the specified file and place the path within "" marks.
 - PHP installed in PATH variables (Available as a checkmark in the composer installer)
+- Node.js installed with npm <https://nodejs.org/en/>
 - Access to `the restricted github page <https://github.com/RedFirebreak/OpenICT-Checkin>`_ (Ask RedFirebreak or any collaborator for access)
 
 After making sure that all the requirements are met on your system, you can continue to the next section.
@@ -84,11 +85,16 @@ This will install all the required filed, make sure they are updated and set the
 .. image:: images/databaseseed.png
    :align: center
 
-If all goes well, your databse should now be created and filled with some dummy data. Technically, you should now see the project as below! `You can also click this link to go to the localhost page. <http://localhost/OpenICT-Checkin/public/>`_
+Now that the database has been filled with data, you can start the application using npm commands. Make sure to change directory to the ``frontend`` Directory. The application will automatically be run on: ``localhost:3000``
 
-.. image:: images/frontpage.png
+.. code-block:: console
+
+   (project/frontend) $ npm install 
+   (project/frontend) $ npm start
+
+.. image:: images/reactlogin.png
    :align: center
-
+   
 .. note::
 
    Error 500 page instead of the project? Or a different error? Make sure to restart the apache server and run ``composer update`` again to make sure the application can gather all the packages. Otherwise, google the error given for a quick fix, or call for your team! :)
